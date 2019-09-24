@@ -1,0 +1,21 @@
+<div class="box col-5 offset-4">
+  <h1>WELCOME TO MY QUIZ</h1>
+  <div class="content">
+    <%= image_tag 'quiz.gif', class: 'img-fluid' %>
+  </div>
+</div>
+<br /><br />
+
+<div class="box col-10 offset-1">
+  <h2>see what everyone thinks of the horse!</h2>
+</div>
+
+  <% @horse.each do |horse| %>
+    <div class="box col-10 offset-1">
+      <h2><%= horse.opinion %></h2><br />
+      <p><%= horse.name %></p>
+    </div>
+  <% end %>
+
+  <%= link_to 'tell us what you think!', new_horse_path, class: 'btn btn-info float-left offset-1' %>
+

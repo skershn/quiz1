@@ -1,0 +1,12 @@
+<div class="box col-10 offset-1">
+  <h1>what did you think of the horse?</h1>
+  <%= simple_form_for @horse do |f| %>
+    <%= f.input :opinion %>
+    <%= f.input :name %>
+    <br />
+    <%= f.submit 'tell us!', class: 'btn btn-info btn-sm float-left' %>
+
+    <%= link_to 'take another look', root_path, class: 'btn btn-secondary btn-sm' %> 
+    
+  <% end %>
+</div>
